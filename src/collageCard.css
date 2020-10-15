@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.cardContainer {
+  box-shadow: 0 2px 4px 1px rgb(179, 177, 177);
+  min-width: 580px;
+  width: 45%;
+  max-width: 700px;
+  margin: 1rem 0.5rem;
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+.cardContainer:hover {
+  box-shadow: 0 2px 5px 3px #a5a5a5;
+  transition: 150ms;
+}
+.imgdiv {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.cardContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.colorOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  opacity: 0.65;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.promoted {
+  background-color: rgb(107, 107, 224);
+  color: white;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  width: 140px;
+  text-align: center;
+}
+.promoted::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -14px;
+  border-left: 15px solid transparent;
+  border-top: 14px solid rgb(107, 107, 224);
+  border-bottom: 15px solid rgb(107, 107, 224);
+}
+.onImageTag {
+  background-color: white;
+  color: #000;
+  position: absolute;
+  padding: 0.5rem 0.9rem;
+  font-size: 14px;
+  border-radius: 50px;
+}
+.bestCollageTag {
+  left: 10px;
+  bottom: 10px;
+}
+.distanceTag {
+  margin-left: 1rem;
+  left: 160px;
+  bottom: 10px;
+}
+.ratingDiv {
+  font-size: 0.8rem;
+  background: orange;
+  color: white;
+  padding: 8px 0;
+  width: 90px;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+.rankingP {
+  position: absolute;
+  color: white;
+  right: 1rem;
+  bottom: 15px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+/* styles for text below image */
+.textcontainer {
+  justify-content: space-between;
+  display: flex;
+}
+.leftpanel {
+  padding: 10px;
+}
+.collagename {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: rgb(48, 48, 48);
+  padding-bottom: 5px;
+}
+
+/* star styling*/
+.starDiv {
+  display: inline-block;
+  font-size: 13px;
+  padding-left: 10px;
+  /* border: 1px solid red; */
+}
+.starsOuter {
+  display: inline-block;
+  position: relative;
+}
+.starsOuter::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 free";
+  color: #cccccc;
+  font-weight: 900;
+}
+
+.starsInner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.starsInner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 free";
+  color: rgb(75, 75, 75);
+  font-weight: 900;
+}
+
+.nearestplaceline {
+  font-size: 13px;
+  padding-top: 5px;
+}
+.nearestplaceline span:nth-child(2) {
+  color: rgb(73, 73, 73);
+  font-size: 11px;
+}
+.distanceline {
+  padding-top: 0.8rem;
+  font-size: 13px;
+  color: rgb(73, 73, 73);
+}
+.distanceline span {
+  color: rgb(8, 141, 8);
+}
+
+/* styles for content on right side */
+.rightpanel {
+  text-align: end;
+  padding: 10px 20px;
+}
+.rightpanel div p {
+  color: rgb(78, 78, 78);
+}
+.rightpanel p:nth-child(1) span {
+  font-size: 12px;
+  background: rgb(252, 57, 57);
+  color: white;
+  padding: 3px 6px;
+  vertical-align: middle;
+  margin-left: 16px;
+  position: relative;
+  vertical-align: middle;
+  border-radius: 8px 0 0 8px;
+}
+.rightpanel p:nth-child(1) span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-right: 13px solid rgb(252, 57, 57);
+  border-bottom: 10px solid transparent;
+  border-radius: 5px;
+  top: 0;
+  bottom: 0;
+  left: -8px;
+}
+.pricetagicon {
+  font-size: 5px;
+  vertical-align: middle;
+  padding: 0 4px 0 0px;
+}
+.price {
+  color: rgb(252, 57, 57);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-family: roboto;
+  font-weight: bold;
+  display: inline-block;
+  padding-top: 5px;
+}
+.rupee1 {
+  font-size: 1rem;
+  padding-right: 3px;
+}
+.rupee2 {
+  font-size: 1.75rem;
+  padding-right: 3px;
+}
+.feeCycleInfo {
+  color: rgb(54, 54, 53);
+  font-size: 0.6rem;
+  font-family: poppins;
+}
+
+.faAminities {
+  font-size: 5px;
+  vertical-align: middle;
+  padding: 0 5px 0 5px;
+}
+.lastline {
+  display: flex;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.offertext {
+  background-color: rgb(180, 238, 204);
+  font-size: 12.5px;
+  padding: 8px 20px 8px 10px;
+  border-radius: 0 50px 50px 0;
+}
+.aminimitiesDiv {
+  font-size: 1rem;
+  color: rgb(23, 76, 138);
+  padding-top: 1.4rem;
+  padding-top: 5px;
+  padding-right: 1rem;
+  font-size: 14px;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+/* Media Query for mobile  */
+@media (min-width: 320px) and (max-width: 480px) {
+  .cardContainer {
+    max-width: 100%;
+    min-width: 95%;
+    position: relative;
+    margin: 1.5rem 0.5rem;
+    border-radius: 6px;
+  }
+  .imgdiv {
+    height: 150px;
+  }
+  .promoted {
+    font-size: 13px;
+    padding: 5px 5px;
+    width: 100px;
+  }
+  .promoted::after {
+    border-left: 15px solid transparent;
+    border-top: 13px solid rgb(107, 107, 224);
+    border-bottom: 12px solid rgb(107, 107, 224);
+  }
+  .onImageTag {
+    padding: 0.3rem 0.5rem;
+    font-size: 8px;
+  }
+  .bestCollageTag {
+    left: 5px;
+    bottom: 10px;
+  }
+  .distanceTag {
+    left: 80px;
+    bottom: 10px;
+  }
+  .ratingDiv {
+    font-size: 0.5rem;
+    padding: 5px 0;
+    width: 50px;
+    top: 1.1rem;
+  }
+  .rankingP {
+    right: 0.5rem;
+    font-size: 7px;
+  }
+  .collagename {
+    font-size: 0.5rem;
+    padding-bottom: 5px;
+  }
+  .starDiv {
+    display: inline-block;
+    font-size: 7px;
+    padding-left: 5px;
+  }
+  .nearestplaceline {
+    font-size: 9px;
+    padding-top: 5px;
+  }
+  .nearestplaceline span:nth-child(2) {
+    font-size: 8px;
+  }
+  .distanceline {
+    padding-top: 0.5rem;
+    font-size: 9px;
+  }
+  .leftpanel {
+    padding: 5px 5px 5px 10px;
+  }
+  .rightpanel {
+    text-align: end;
+    padding: 10px 5px;
+  }
+  .rightpanel p:nth-child(1) span {
+    font-size: 8px;
+    background: rgb(252, 57, 57);
+    color: white;
+    padding: 2px 4px 2px 5px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  .rightpanel p:nth-child(1) span::after {
+    border-top: 8px solid transparent;
+    border-right: 10px solid rgb(252, 57, 57);
+    border-bottom: 8px solid transparent;
+    border-radius: 10px;
+    top: -1px;
+    bottom: 0;
+    left: -5px;
+  }
+  .pricetagicon {
+    font-size: 5px;
+    vertical-align: middle;
+    padding: 0 2px 0 0px;
+  }
+  .rupee1 {
+    font-size: 0.5rem;
+    padding-right: 0px;
+  }
+  .rupee2 {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1rem;
+    padding-top: 5px;
+  }
+  .delprice {
+    font-size: 0.7rem;
+    padding-right: 5px;
+  }
+
+  .feeCycleInfo {
+    font-size: 0.5rem;
+    font-family: poppins;
+  }
+  .offertext {
+    background-color: rgb(180, 238, 204);
+    font-size: 8px;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .aminimitiesDiv {
+    font-size: 0.6rem;
+    padding-top: 0.4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 8px;
+  }
+}

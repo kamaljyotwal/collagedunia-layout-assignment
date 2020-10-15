@@ -1,0 +1,16 @@
+/* Contains the styles for layout wrapper containing all cards*/
+.layoutContainerStyle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 3rem;
+  width: 95%;
+  margin: 0 auto;
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .layoutContainerStyle {
+    padding-top: 0.5rem;
+  }
+}
